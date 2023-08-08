@@ -202,7 +202,7 @@ def update_fshift_presets(preset, qfrency, tmbre):
         {"value": tmbre, "__type__": "update"},
     )
 
-i18n = I18nAuto()
+i18n = I18nAuto(language=pt_BR)
 #i18n.print()
 # 判断是否有能用来训练和加速推理的N卡
 ngpu = torch.cuda.device_count()
@@ -2556,7 +2556,7 @@ with gr.Blocks(theme=gr.themes.Base()) as app:
                         with open("docs/faq.md", "r", encoding="utf8") as f:
                             info = f.read()
                     else:
-                        with open("docs/faq_en.md", "r", encoding="utf8") as f:
+                        with open("docs/faq_pt_BR.md", "r", encoding="utf8") as f:
                             info = f.read()
                     gr.Markdown(value=info)
                 except:
