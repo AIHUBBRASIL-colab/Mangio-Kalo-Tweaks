@@ -2256,6 +2256,9 @@ with gr.Blocks(theme=gr.themes.Base()) as app:
                         [vc_output3],
                     )
                     but1.click(fn=lambda: easy_uploader.clear())
+            gr.Markdown(
+                i18n("Original RVC:https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI    Mangio's RVC Fork:https://github.com/Mangio621/Mangio-RVC-Fork    ❤️ If you like the EasyGUI, help me keep it.❤️    https://paypal.me/lesantillan    "
+                ))
         with gr.TabItem(i18n("Download Model")):
             with gr.Row():
                 url=gr.Textbox(label=i18n("Enter the URL to the Model:"))
@@ -2267,12 +2270,7 @@ with gr.Blocks(theme=gr.themes.Base()) as app:
                 download_button.click(fn=download_from_url, inputs=[url, model], outputs=[status_bar])
             with gr.Row():
                 gr.Markdown(
-                i18n("""
-                Original RVC:https://github.com/RVC-Project/Mangio-Kalo-Tweaks
-                Mangio's RVC Fork:https://github.com/Mangio621/Mangio-RVC-Fork
-                ❤️ If you like the EasyGUI, help me keep it.❤️ 
-                https://paypal.me/lesantillan
-                """
+                i18n("Original RVC:https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI    Mangio's RVC Fork:https://github.com/Mangio621/Mangio-RVC-Fork    ❤️ If you like the EasyGUI, help me keep it.❤️    https://paypal.me/lesantillan    "
                 ))
                 
         def has_two_files_in_pretrained_folder():
@@ -2285,7 +2283,7 @@ with gr.Blocks(theme=gr.themes.Base()) as app:
             return num_files >= 2
 
         if has_two_files_in_pretrained_folder():    
-            print("Pretrained weights are downloaded. Training tab enabled!\n-------------------------------")       
+            print("Weights pré-treinados são baixados. Guia de treinamento ativada!\n-------------------------------")       
             with gr.TabItem(i18n("Train"), visible=False):
                 with gr.Row():
                     with gr.Column():
@@ -2411,21 +2409,21 @@ with gr.Blocks(theme=gr.themes.Base()) as app:
                                         maximum=40,
                                         step=1,
                                         label=i18n("Batch Size (LEAVE IT unless you know what you're doing!):"),
-                                        value=20,
+                                        value=default_batch_size,
                                         interactive=True,
                                     )
                                     if_save_latest13 = gr.Checkbox(
-                                        label=i18n("Save only the latest '.ckpt' file to save disk space."),
+                                        label="Save only the latest '.ckpt' file to save disk space.",
                                         value=True,
                                         interactive=True,
                                     )
                                     if_cache_gpu17 = gr.Checkbox(
-                                        label=i18n("Cache all training sets to GPU memory. Caching small datasets (less than 10 minutes) can speed up training, but caching large datasets will consume a lot of GPU memory and may not provide much speed improvement."),
+                                        label="Cache all training sets to GPU memory. Caching small datasets (less than 10 minutes) can speed up training, but caching large datasets will consume a lot of GPU memory and may not provide much speed improvement.",
                                         value=False,
                                         interactive=True,
                                     )
                                     if_save_every_weights18 = gr.Checkbox(
-                                        label=i18n("Save a small final model to the 'weights' folder at each save point."),
+                                        label="Save a small final model to the 'weights' folder at each save point.",
                                         value=True,
                                         interactive=True,
                                     )
@@ -2560,10 +2558,11 @@ with gr.Blocks(theme=gr.themes.Base()) as app:
                             info = f.read()
                     gr.Markdown(value=info)
                 except:
-                    gr.Markdown("")
+                    gr.Markdown(i18n("Original RVC:https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI    Mangio's RVC Fork:https://github.com/Mangio621/Mangio-RVC-Fork    ❤️ If you like the EasyGUI, help me keep it.❤️    https://paypal.me/lesantillan    "
+                ))
         else:
-            print("Pretrained weights not downloaded. Disabling training tab.")
-            print("Wondering how to train a voice? Visit here for the RVC model training guide: https://t.ly/RVC_Training_Guide")
+            print("Weights  pré-treinados não baixados. Desativando guia de treinamento.")
+            print("Quer saber como treinar uma voz? Acesse aqui o guia de treinamento do modelo RVC: https://docs.google.com/document/d/1NrZNvjydOy2HWtPsSlR6DUiKo-xC1UPZ/edit ou https://youtu.be/_i-iD2Zvpeo")
             print("-------------------------------\n")
 
     #region Mangio Preset Handler Region
