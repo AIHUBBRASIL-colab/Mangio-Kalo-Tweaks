@@ -2946,7 +2946,7 @@ with gr.Blocks(theme=gr.themes.Soft(), title="Mangio-RVC-Web 💻") as app:
                     with open("docs/faq.md", "r", encoding="utf8") as f:
                         info = f.read()
                 else:
-                    with open("docs/faq_en.md", "r", encoding="utf8") as f:
+                    with open("docs/faq_pt_BR.md", "r", encoding="utf8") as f:
                         info = f.read()
                 gr.Markdown(value=info)
             except:
