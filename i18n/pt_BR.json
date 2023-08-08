@@ -16,7 +16,7 @@
     "变调(整数, 半音数量, 升八度12降八度-12)": "Mude o tom aqui. Se a voz for do mesmo sexo, não é necessario alterar (12 caso seja Masculino para feminino, -12 caso seja ao contrário).",
     "Add audio's name to the path to the audio file to be processed (default is the correct format example) Remove the path to use an audio from the dropdown list:": "Caminho do arquivo de áudio a ser processado (o padrão é o exemplo de formato abaixo):",
     "Auto detect audio path and select from the dropdown:": "Auto detect audio path and select from the dropdown:",
-    "选择音高提取算法,输入歌声可用pm提速,harvest低音好但巨慢无比,crepe效果好但吃GPU": "Selecione o algoritmo de extração de tom <br>'pm': extração mais rápida, mas discurso de qualidade inferior; <br>'harvest': graves melhores, mas extremamente lentos; <br>'crepe': melhor qualidade, mas intensivo em GPU):",
+    "选择音高提取算法,输入歌声可用pm提速,harvest低音好但巨慢无比,crepe效果好但吃GPU": "Selecione o algoritmo de extração de tom /n'pm': extração mais rápida, mas discurso de qualidade inferior; <br>'harvest': graves melhores, mas extremamente lentos; <br>'crepe': melhor qualidade, mas intensivo em GPU):",
     "crepe_hop_length": "Mangio-Crepe Hop Length. Números mais altos reduzirão a chance de mudanças extremas de tom, mas números mais baixos aumentarão a precisão.",
     "特征检索库文件路径": "Caminho do arquivo do banco de dados de pesquisa de recursos",
     ">=3则使用对harvest音高识别的结果使用中值滤波，数值为滤波半径，使用可以削弱哑音": ">=3, use o filtro mediano para o resultado do reconhecimento do tom da heverst, e o valor é o raio do filtro, que pode enfraquecer o mudo.",
