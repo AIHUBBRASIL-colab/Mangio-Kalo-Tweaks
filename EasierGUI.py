@@ -2411,21 +2411,21 @@ with gr.Blocks(theme=gr.themes.Base()) as app:
                                         maximum=40,
                                         step=1,
                                         label=i18n("Batch Size (LEAVE IT unless you know what you're doing!):"),
-                                        value=default_batch_size,
+                                        value=20,
                                         interactive=True,
                                     )
                                     if_save_latest13 = gr.Checkbox(
-                                        label="Save only the latest '.ckpt' file to save disk space.",
+                                        label=i18n("Save only the latest '.ckpt' file to save disk space."),
                                         value=True,
                                         interactive=True,
                                     )
                                     if_cache_gpu17 = gr.Checkbox(
-                                        label="Cache all training sets to GPU memory. Caching small datasets (less than 10 minutes) can speed up training, but caching large datasets will consume a lot of GPU memory and may not provide much speed improvement.",
+                                        label=i18n("Cache all training sets to GPU memory. Caching small datasets (less than 10 minutes) can speed up training, but caching large datasets will consume a lot of GPU memory and may not provide much speed improvement."),
                                         value=False,
                                         interactive=True,
                                     )
                                     if_save_every_weights18 = gr.Checkbox(
-                                        label="Save a small final model to the 'weights' folder at each save point.",
+                                        label=i18n("Save a small final model to the 'weights' folder at each save point."),
                                         value=True,
                                         interactive=True,
                                     )
