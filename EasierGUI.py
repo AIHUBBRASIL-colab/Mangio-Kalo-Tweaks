@@ -202,7 +202,7 @@ def update_fshift_presets(preset, qfrency, tmbre):
         {"value": tmbre, "__type__": "update"},
     )
 
-i18n = I18nAuto(language=pt_BR)
+i18n = I18nAuto(language="pt_BR")
 #i18n.print()
 # 判断是否有能用来训练和加速推理的N卡
 ngpu = torch.cuda.device_count()
